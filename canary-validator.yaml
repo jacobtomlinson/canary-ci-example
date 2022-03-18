@@ -1,0 +1,17 @@
+apiVersion: container-canary.nvidia.com/v1
+kind: Validator
+name: example
+description: Container Canary CI Example
+env: []
+ports:
+  - port: 5000
+    protocol: TCP
+volumes: []
+checks:
+  - name: http
+    description: Exposes an HTTP interface on port 5000
+    probe:
+      httpGet:
+        path: /
+        port: 5000
+      initialDelaySeconds: 3
