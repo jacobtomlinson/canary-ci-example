@@ -12,6 +12,14 @@ checks:
     description: Exposes an HTTP interface on port 5000
     probe:
       httpGet:
-        path: /
+        path: /foo
         port: 5000
       initialDelaySeconds: 3
+  - name: python
+    description: Has Python installed
+    probe:
+      exec:
+        command:
+          - /bin/sh
+          - -c
+          - "which python"
