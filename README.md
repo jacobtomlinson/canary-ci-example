@@ -1,6 +1,6 @@
 # Container Canary CI Example
 
-This repo shows an example of building a container and validating it using [Container Canary](https://github.com/NVIDIA/container-canary).
+This repo shows an example of building a container and validating it using [Container Canary](https://github.com/NVIDIA/container-canary) in GitHub Actions.
 
 - [app.py](app.py) contains our application code.
 - [Dockerfile](Dockerfile) contains our container image specification.
