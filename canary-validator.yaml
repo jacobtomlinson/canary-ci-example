@@ -14,7 +14,7 @@ checks:
       httpGet:
         path: /foo
         port: 5000
-      initialDelaySeconds: 3
+      failureThreshold: 30
   - name: python
     description: Has Python installed
     probe:

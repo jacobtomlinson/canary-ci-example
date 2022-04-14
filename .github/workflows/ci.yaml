@@ -13,11 +13,11 @@ jobs:
 
       - name: Install Container Canary
         run: |
-          curl -L https://github.com/NVIDIA/container-canary/releases/download/v0.1.1/canary_linux_amd64 > /usr/local/bin/canary
+          curl -L https://github.com/NVIDIA/container-canary/releases/download/v0.2.0/canary_linux_amd64 > /usr/local/bin/canary
           chmod +x /usr/local/bin/canary
 
       - name: Build Container
-        run: docker build -t jacobtomlinson/canary-ci-example:latest .
+        run: docker build -t foo/canary-ci-example:latest .
 
       - name: Validate container
-        run: canary validate --file canary-validator.yaml jacobtomlinson/canary-ci-example:latest
+        run: canary validate --file canary-validator.yaml foo/canary-ci-example:latest
