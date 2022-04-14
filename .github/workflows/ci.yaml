@@ -13,7 +13,7 @@ jobs:
 
       - name: Install Container Canary
         run: |
-          curl -L https://github.com/NVIDIA/container-canary/releases/download/v0.2.0/canary_linux_amd64 > /usr/local/bin/canary
+          curl -L https://github.com/NVIDIA/container-canary/releases/download/v0.2.1/canary_linux_amd64 > /usr/local/bin/canary
           chmod +x /usr/local/bin/canary
 
       - name: Build Container
